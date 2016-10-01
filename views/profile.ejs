@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Grid Loading and Hover Effect | Demo 1</title>
+  <meta name="description" content="Grid Loading and Hover Effect: Recreating Samsung's grid loading effect" />
+  <meta name="keywords" content="grid loading, swipe, effect, slide, masonry, web design, tutorial" />
+  <meta name="author" content="Codrops" />
+  <link rel="shortcut icon" href="../favicon.ico">
+  <link href="/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- <link rel="stylesheet" type="text/css" href="../cssmansory/normalize.css" /> -->
+  <!-- <link rel="stylesheet" type="text/css" href="../cssmansory/demo.css" /> -->
+  <link rel="stylesheet" type="text/css" href="/component.css" />
+  <link href="/css/custom.min.css" rel="stylesheet">
+  <link href="/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+  <script src="/modernizr.custom.js"></script>
+</head>
+
+<body class="slabbg">
+    <div class="container body">
+        <div class="main_container">
+            <!-- page content -->
+            <div class="col-md-12">
+                <div class="col-middle">
+                    <div class="text-center text-center">
+                        <div class="mid_center">
+                            <h3>Hi..</h3>
+                            <form action="/result" method="POST">
+                                <div class="col-xs-12 form-group pull-right top_search">
+                                    <div class="input-group">
+                                        <input type="text" class="form-control" placeholder="What Trends do you want to know ? " name="search">
+                                        <span class="input-group-btn">
+                              <button class="btn btn-default" type="submit">Go!</button>
+                          </span>
+                                    </div>
+                                </div>
+                            </form>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- /page content -->
+        </div>
+    </div>
+    <div class="container">
+        <!-- Top Navigation -->
+
+
+        <section class="grid-wrap">
+            <ul class="grid swipe-right" id="grid">
+
+                <li>
+                    <div class="col-lg-12">
+                        <div class="tile-stats twitter">
+                            <div class="profile text-center">
+                                <div class="profile_pic ">
+                                    <a href="<%= hasiltweet.statuses[0].user.url %>"><img src=<%= hasiltweet.statuses[0].user.profile_image_url %> alt="..." class="img-circle profile_img"></a>
+                                    <p><%= hasiltweet.statuses[0].user.name %></p>
+                                </div>
+
+                            </div>
+
+
+
+
+                            <div class="col-lg-12">
+                                <div class="divider"></div>
+
+                                <p><%= hasiltweet.statuses[0].text %></p>
+                                <div class="divider"></div>
+
+                            </div>
+                            <div class="col-lg-12">
+                                <i class="  fa fa-twitter"></i> Total Retweeted : <%= hasiltweet.statuses[0].retweet_count %>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+                </li>
+
+
+                <li>
+                    <div class="col-lg-12">
+                        <div class="tile-stats twitter">
+                            <div class="profile text-center">
+                                <div class="profile_pic ">
+                                    <a href="<%= hasiltweet.statuses[2].user.url %>"><img src=<%= hasiltweet.statuses[2].user.profile_image_url %> alt="..." class="img-circle profile_img"></a>
+                                    <p><%= hasiltweet.statuses[2].user.name %></p>
+                                </div>
+
+                            </div>
+
+
+
+
+                            <div class="col-lg-12">
+                                <div class="divider"></div>
+
+                                <p><%= hasiltweet.statuses[2].text %></p>
+                                <div class="divider"></div>
+
+                            </div>
+                            <div class="col-lg-12">
+                                <i class="  fa fa-twitter"></i> Total Retweeted : <%= hasiltweet.statuses[2].retweet_count %>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+                </li>
+                <li>
+                    <div class="col-lg-12">
+                        <div class="tile-stats twitter">
+                            <div class="profile text-center">
+                                <div class="profile_pic ">
+                                    <a href="<%=hasilfb[1].link%>"><img src=<%= hasilfb[1].picture.data.url %> alt="..." class="img-circle profile_img"></a>
+                                    <p><%= hasilfb[1].name %></p>
+                                    <p><%= hasilfb[1].fan_count %> <i class="fa fa-thumbs-o-up"></i></p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </li>
+
+                <li>
+                    <div class="col-lg-12">
+                        <div class="tile-stats youtube">
+                            <div class="profile text-center">
+                                <h3><a href="https://www.youtube.com/watch?v=<%= hasil.items[0].id.videoId %>"><%= hasil.items[0].snippet.title %></a></p>
+
+											</div>
+														<div class="col-lg-12" style="margin-top:20px;">
+																<div class="col-md-12">
+			                        <div class="thumbnail">
+			                          <div class="image view view-first">
+
+                                  <img style="width: 100%; display: block;" src=<%= hasil.items[0].snippet.thumbnails.high.url %> alt="image">
+			                            <div class="mask">
+			                              <p><%= hasil.items[0].snippet.description %></p>
+			                              <div class="tools tools-bottom">
+			                                <a href="#"><i class="fa fa-link"></i></a>
+			                                <a href="#"><i class="fa fa-pencil"></i></a>
+			                                <a href="#"><i class="fa fa-times"></i></a>
+			                              </div>
+			                            </div>
+			                          </div>
+			                          <div class="caption">
+			                            <p align="center"></i></p>
+			                          </div>
+			                        </div>
+			                      </div>
+													<div class="divider"></div>
+
+														</div>
+														<div class="col-lg-12">
+															<i class="  fa fa-youtube"></i>
+														</div>
+
+
+												</div>
+
+										</div>
+								</li>
+
+                <li>
+                    <div class="col-lg-12">
+                        <div class="tile-stats twitter">
+                            <div class="profile text-center">
+                                <div class="profile_pic ">
+                                    <a href="<%=hasilfb[2].link%>"><img src=<%= hasilfb[2].picture.data.url %> alt="..." class="img-circle profile_img"></a>
+                                    <p><%= hasilfb[2].name %></p>
+                                    <p><%= hasilfb[2].fan_count %> <i class="fa fa-thumbs-o-up"></i></p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </li>
+
+                <li>
+                    <div class="col-lg-12">
+                        <div class="tile-stats youtube">
+                            <div class="profile text-center">
+                                <h3><a href="https://www.youtube.com/watch?v=<%= hasil.items[1].id.videoId %>"><%= hasil.items[1].snippet.title %></a></p>
+
+											</div>
+														<div class="col-lg-12" style="margin-top:20px;">
+																<div class="col-md-12">
+			                        <div class="thumbnail">
+			                          <div class="image view view-first">
+
+                                  <img style="width: 100%; display: block;" src=<%= hasil.items[1].snippet.thumbnails.high.url %> alt="image">
+			                            <div class="mask">
+			                              <p><%= hasil.items[1].snippet.description %></p>
+			                              <div class="tools tools-bottom">
+			                                <a href="#"><i class="fa fa-link"></i></a>
+			                                <a href="#"><i class="fa fa-pencil"></i></a>
+			                                <a href="#"><i class="fa fa-times"></i></a>
+			                              </div>
+			                            </div>
+			                          </div>
+			                          <div class="caption">
+			                            <p align="center"></i></p>
+			                          </div>
+			                        </div>
+			                      </div>
+													<div class="divider"></div>
+
+														</div>
+														<div class="col-lg-12">
+															<i class="  fa fa-youtube"></i>
+														</div>
+
+
+												</div>
+
+										</div>
+								</li>
+                <li>
+                    <div class="col-lg-12">
+                        <div class="tile-stats twitter">
+                            <div class="profile text-center">
+                                <div class="profile_pic ">
+                                    <a href="<%=hasilfb[0].link%>"><img src=<%= hasilfb[0].picture.data.url %> alt="..." class="img-circle profile_img"></a>
+                                    <p><%= hasilfb[0].name %></p>
+                                    <p><%= hasilfb[0].fan_count %> <i class="fa fa-thumbs-o-up"></i></p>
+
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                    </div>
+                </li>
+
+                <li>
+                    <div class="col-lg-12">
+                        <div class="tile-stats twitter">
+                            <div class="profile text-center">
+                                <div class="profile_pic ">
+                                    <a href="<%= hasiltweet.statuses[1].user.url %>"><img src=<%= hasiltweet.statuses[1].user.profile_image_url %> alt="..." class="img-circle profile_img"></a>
+                                    <p><%= hasiltweet.statuses[1].user.name %></p>
+                                </div>
+
+                            </div>
+
+
+
+
+                            <div class="col-lg-12">
+                                <div class="divider"></div>
+
+                                <p><%= hasiltweet.statuses[1].text %></p>
+                                <div class="divider"></div>
+
+                            </div>
+                            <div class="col-lg-12">
+                                <i class="  fa fa-twitter"></i> Total Retweeted : <%= hasiltweet.statuses[1].retweet_count %>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+                </li>
+
+
+                <li>
+                    <div class="col-lg-12">
+                        <div class="tile-stats youtube">
+                            <div class="profile text-center">
+                                <h3><a href="https://www.youtube.com/watch?v=<%= hasil.items[3].id.videoId %>"><%= hasil.items[3].snippet.title %></a></p>
+
+											</div>
+														<div class="col-lg-12" style="margin-top:20px;">
+																<div class="col-md-12">
+			                        <div class="thumbnail">
+			                          <div class="image view view-first">
+
+                                  <img style="width: 100%; display: block;" src=<%= hasil.items[3].snippet.thumbnails.high.url %> alt="image">
+			                            <div class="mask">
+			                              <p><%= hasil.items[3].snippet.description %></p>
+			                              <div class="tools tools-bottom">
+			                                <a href="#"><i class="fa fa-link"></i></a>
+			                                <a href="#"><i class="fa fa-pencil"></i></a>
+			                                <a href="#"><i class="fa fa-times"></i></a>
+			                              </div>
+			                            </div>
+			                          </div>
+			                          <div class="caption">
+			                            <p align="center"></i></p>
+			                          </div>
+			                        </div>
+			                      </div>
+													<div class="divider"></div>
+
+														</div>
+														<div class="col-lg-12">
+															<i class="  fa fa-youtube"></i>
+														</div>
+
+
+												</div>
+
+										</div>
+								</li>
+
+
+
+                <li>
+                    <div class="col-lg-12">
+                        <div class="tile-stats youtube">
+                            <div class="profile text-center">
+                                <h3><a href="https://www.youtube.com/watch?v=<%= hasil.items[2].id.videoId %>"><%= hasil.items[2].snippet.title %></a></p>
+
+                      </div>
+                            <div class="col-lg-12" style="margin-top:20px;">
+                                <div class="col-md-12">
+                              <div class="thumbnail">
+                                <div class="image view view-first">
+
+                                  <img style="width: 100%; display: block;" src=<%= hasil.items[2].snippet.thumbnails.high.url %> alt="image">
+                                  <div class="mask">
+                                    <p><%= hasil.items[2].snippet.description %></p>
+                                    <div class="tools tools-bottom">
+                                      <a href="#"><i class="fa fa-link"></i></a>
+                                      <a href="#"><i class="fa fa-pencil"></i></a>
+                                      <a href="#"><i class="fa fa-times"></i></a>
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="caption">
+                                  <p align="center"></i></p>
+                                </div>
+                              </div>
+                            </div>
+                          <div class="divider"></div>
+
+                            </div>
+                            <div class="col-lg-12">
+                              <i class="  fa fa-youtube"></i>
+                            </div>
+
+
+                        </div>
+
+                    </div>
+                </li>
+
+
+
+
+
+            </ul>
+        </section>
+
+    </div>
+    <!-- /container -->
+    <script src="/masonry.pkgd.min.js"></script>
+    <script src="/imagesloaded.pkgd.min.js"></script>
+    <script src="/classie.js"></script>
+    <script src="/colorfinder-1.1.js"></script>
+    <script src="/gridScrollFx.js"></script>
+    <script>
+        new GridScrollFx(document.getElementById('grid'), {
+            viewportFactor: 0.4
+        });
+    </script>
+</body>
+
+</html>

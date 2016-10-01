@@ -1,0 +1,25 @@
+2314157166.9106aa7.d7a88b1bb5ce42a8ac19bd4ff0b94556
+
+
+client id: 479964753573-1lr1hlu54bf8qvk9ouav3iuv3hiqfotu.apps.googleusercontent.com
+client secret: sYqEvf1RZB4hTYiusD4FFP30
+
+api key: AIzaSyCp33l3IYhWypewNELCDblLQDkh6Yy8Odc
+
+
+function and (callback){
+  ////
+  ////
+  callback
+}
+
+and(function(){
+  ////
+  ///
+})
+
+GET https://www.googleapis.com/youtube/v3/search?part=snippet&q=nba&type=video&key=AIzaSyCp33l3IYhWypewNELCDblLQDkh6Yy8Odc
+
+
+client id: 479964753573-30q4k6ttlefjc0fbgdd9d8rf3dln5n8j.apps.googleusercontent.com
+client secret: nNGkGAcDs3aT8hLnncoLcWkf

@@ -1,0 +1,14 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+</head>
+<body>
+</body>
+<% for (let i in hasil.items){ %>
+  Title: <%= hasil.items[i].snippet.title %><br>
+  <a href="https://www.youtube.com/watch?v=<%= hasil.items[i].id.videoId %>"><img src=<%= hasil.items[i].snippet.thumbnails.high.url %>></a><br>
+  Description: <%= hasil.items[i].snippet.description %><br>
+  View Count: <%= hasil.items[i].viewCount %><br>
+  <br>
+<% } %>
+</html>
